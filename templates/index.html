@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Roupas</title>
+</head>
+<body>
+    <h1>Cadastro de Nova Roupa</h1>
+    <form method="post">
+        
+        <label for="nome">Nome da Roupa:</label>
+        <input type="text" id="nome" name="nome" required><br><br>
+        
+        <label for="tamanho">Tamanho:</label>
+        <input type="text" id="tamanho" name="tamanho" required><br><br>
+        
+        <label for="cor">Cor:</label>
+        <input type="text" id="cor" name="cor" required><br><br>
+        
+        <label for="preco">Preço:</label>
+        <input type="text" id="preco" name="preco" required><br><br>
+
+        <label for="cor">Gênero:</label>
+        <input type="text" id="genero" name="genero" required><br><br>
+        
+        <input type="submit" value="Cadastrar">
+    </form>
+    <br>
+    <a href="{{ url_for('lista') }}">Ver Lista de Roupas</a><br>
+</body>
+</html>
