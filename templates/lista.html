@@ -5,12 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Lista de Roupas</title>
-</head>
+    <style>
+        body{
+            text-align: center;
+        };
+    </style>
+    </head>
+
 <body>
     <h1>Lista de Roupas Cadastradas</h1>
-    <table border="2">
-            <tr>
-                <td><strong>Nome</strong></td>
+    
+    <div>    
+    <table border="2" style="margin: auto;">
+          
+        <tr>
+            <td><strong>Nome</strong></td>
                 <td><strong>Cor</strong></td>
                 <td><strong>Tamanho</strong></td>
                 <td><strong>Preço</strong></td>
@@ -32,7 +41,7 @@
             </tr>
         </thead>
     </table>
-                
+             
     <br>
     <a href="{{ url_for('index') }}">Voltar</a>
 </body>
