@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Lista de Roupas</title>
+    <style>
+        body{
+            text-align: center;
+        };
+    </style>
+    </head>
+
+<body>
+    <h1>Lista de Roupas Cadastradas</h1>
+    
+    <div>    
+    <table border="2" style="margin: auto;">
+          
+        <tr>
+            <td><strong>Nome</strong></td>
+                <td><strong>Cor</strong></td>
+                <td><strong>Tamanho</strong></td>
+                <td><strong>Preço</strong></td>
+                <td><strong>Gênero</strong></td>
+            </tr>
+            {% for roupa in roupas %}
+            <tr>
+                <td>{{roupa.nome}}</td>
+                <td>{{roupa.cor}}</td>
+                <td>{{roupa.tamanho}}</td>
+                <td>{{roupa.preco}}</td>
+                <td>{{roupa.genero}}</td>
+                <td>
+                <form method="post" action="{{ url_for('excluir', id=roupa.id) }}">
+                    <input type="submit" value="Excluir">
+                </form>
+                </td>
+                {% endfor %}
+            </tr>
+        </thead>
+    </table>
+             
+    <br>
+    <a href="{{ url_for('index') }}">Voltar</a>
+</body>
+</html>

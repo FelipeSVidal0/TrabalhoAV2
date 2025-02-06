@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Roupas</title>
+</head>
+<body>
+    <h1>Cadastro de Roupas</h1>
+    <div class="teste">
+        <form method="post">
+            <label for="nome">Nome da Roupa:</label>
+            <input type="text" id="nome" name="nome" required><br><br>
+            
+            <label for="tamanho">Tamanho:</label>
+            <input type="text" id="tamanho" name="tamanho" required><br><br>
+            
+            <label for="cor">Cor:</label>
+            <input type="text" id="cor" name="cor" required><br><br>
+            
+            <label for="preco">Preço:</label>
+            <input type="text" id="preco" name="preco" required><br><br>
+
+            <label for="cor">Gênero:</label>
+            <input type="text" id="genero" name="genero" required><br><br>
+            
+            <input type="submit" value="Cadastrar">
+        </form>
+        <br>
+    </div>
+    <a href="{{ url_for('lista') }}">Ver Lista de Roupas</a><br>    
+</body>
+<style>
+    form {
+        width: 80%; /* Adjust form width as needed */
+        max-width: 600px; /* Limit maximum width */
+        padding: 20px;
+        background-color: #f0f0f0;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1{
+        position:static;
+        text-align: center;
+        top: 250px;
+    }
+    label {
+        display: inline-block;
+        text-align: left;
+        width: 100px; /* Adjust label width as needed */
+        margin-right: 10px;
+    }
+
+    input[type="text"] {
+        width: calc(100% - 120px); /* Adjust input width to fit form */
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        text-decoration: none;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+
+    a {
+        text-decoration: none;
+        position: inherit;
+        bottom: 250px;
+        left: 878px;
+    }
+
+    .teste{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Ensure the body covers the entire viewport height */
+        margin: 0; /* Remove default margin */
+        text-align: center; /* Align text content */
+    }
+</style>
+</html>
